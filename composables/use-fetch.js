@@ -1,16 +1,7 @@
 
 import { ref, watchEffect } from 'vue'
 
-
-export function useGetArticle(getId) {
-    return useFetch(() => `https://api.spaceflightnewsapi.net/v3/articles/${getId()}`)
-  }
-
-export function useGetArticles() {
-return useFetch(() => `https://api.spaceflightnewsapi.net/v3/articles`)
-}
-  
-function useFetch(getUrl) { 
+export function useFetch(getUrl) { 
    
     const data = ref(null);
     const error = ref(null);

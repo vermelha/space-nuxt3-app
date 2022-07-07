@@ -14,7 +14,7 @@
     </template>
     <template v-else-if="error" class="text-center">Something went wrong: {{error.message}}</template>
     
-   
+
 </div>
 
     </div>
@@ -26,7 +26,11 @@
 <script lang="ts">
 
 import { defineComponent } from 'vue'
-import { useGetArticles }  from '@/composables/api-calls'
+import { useFetch }  from '@/composables/use-fetch'
+
+export function useGetArticles() {
+return useFetch(() => `https://api.spaceflightnewsapi.net/v3/articles`)
+}
 
 
 export default defineComponent({
@@ -38,7 +42,7 @@ export default defineComponent({
       data,
       error,
       isPending
-    }
+   }
   }
  
   
