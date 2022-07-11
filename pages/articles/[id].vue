@@ -12,12 +12,8 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { useFetch }  from '@/composables/use-fetch'
+import { useGetArticle }  from '@/composables/use-fetch'
 
-
-export function useGetArticle(getId) {
-    return useFetch(() => `https://api.spaceflightnewsapi.net/v3/articles/${getId()}`)
-  }
 
   
 

@@ -11,7 +11,6 @@
     
   <div class="flex">
     
-     
 
           
            <nuxt-link
@@ -19,6 +18,12 @@
                   aria-current="page"
                   to="/articles" :class="{active: $route.name==='articles'}"
                   >articles</nuxt-link
+                >
+                     
+          <nuxt-link
+                  class="nav-link ml-6 uppercase inline-block text-xs px-8 py-2 border text-white border-white hover:border-transparent hover:text-black hover:bg-white mt-4 lg:mt-0"    b      
+                  to="/" 
+                  >logout</nuxt-link
                 >
 
 
